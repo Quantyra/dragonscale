@@ -1,15 +1,8 @@
 {
-  "groups": {
-    "group:admins": [
-      "dfredriksen@cyint.technology",
-      "daniel.eric.fredriksen@gmail.com"
-    ]
-  },
-
   "acls": [
     {
       "action": "accept",
-      "src": ["group:admins"],
+      "src": ["*"],
       "dst": ["*:*"]
     }
   ],
