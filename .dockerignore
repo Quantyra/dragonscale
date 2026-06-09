@@ -1,0 +1,15 @@
+.git
+.github
+.env
+.env.*
+data
+*.db
+*.sqlite
+*.sqlite3
+*.key
+*.pem
+*.crt
+*.log
+.pytest_cache
+.ruff_cache
+__pycache__

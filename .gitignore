@@ -1,0 +1,15 @@
+.env
+.env.*
+!*.env.example
+data/
+*.db
+*.sqlite
+*.sqlite3
+*.key
+*.pem
+*.crt
+*.log
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+config/headscale.config.yaml

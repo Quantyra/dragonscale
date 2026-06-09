@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  headscale:
+    image: ${DRAGONSCALE_IMAGE:-headscale/headscale:v0.28.0}
+    container_name: dragonscale-headscale
+    command: serve
+    restart: unless-stopped
+    volumes:
+      - ${DRAGONSCALE_CONFIG_DIR:-/opt/dragonscale/config}:/etc/headscale:ro
+      - ${DRAGONSCALE_DATA_DIR:-/opt/dragonscale/data}:/var/lib/headscale
+    expose:
+      - "8080"
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=orchestrator_default
+      - traefik.http.routers.dragonscale-web.rule=Host(`${DRAGONSCALE_HOSTNAME:-dragonscale.kuzuryu.ai}`)
+      - traefik.http.routers.dragonscale-web.entrypoints=web
+      - traefik.http.routers.dragonscale-web.middlewares=dragonscale-https-redirect
+      - traefik.http.middlewares.dragonscale-https-redirect.redirectscheme.scheme=https
+      - traefik.http.routers.dragonscale.rule=Host(`${DRAGONSCALE_HOSTNAME:-dragonscale.kuzuryu.ai}`)
+      - traefik.http.routers.dragonscale.entrypoints=websecure
+      - traefik.http.routers.dragonscale.tls.certresolver=le
+      - traefik.http.services.dragonscale.loadbalancer.server.port=8080
+    networks:
+      - orchestrator-edge
+
+networks:
+  orchestrator-edge:
+    external: true
+    name: orchestrator_default
