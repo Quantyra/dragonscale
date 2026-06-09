@@ -29,6 +29,7 @@ Recommended host paths:
 ## Deploy
 
 ```bash
+cd /opt/dragonscale/src
 docker compose --env-file /opt/dragonscale/.env -f deploy/docker-compose.traefik.yml up -d
 ```
 

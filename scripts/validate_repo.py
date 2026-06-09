@@ -20,6 +20,7 @@ REQUIRED_FILES = [
     "docs/operations.md",
     "docs/cutover.md",
     "docs/kuzuryu-private-access.md",
+    "scripts/render-config.ps1",
 ]
 
 FORBIDDEN_PATTERNS = [

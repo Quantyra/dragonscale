@@ -46,7 +46,7 @@ Day-one goals:
 4. Render the private Headscale config:
 
    ```powershell
-   powershell -NoProfile -ExecutionPolicy Bypass -File scripts/render-config.ps1 -EnvFile .env -Template config/headscale.config.example.yaml -Output config/headscale.config.yaml
+   powershell -NoProfile -ExecutionPolicy Bypass -File scripts/render-config.ps1 -EnvFile .env -Template config/headscale.config.example.yaml -Output config/config.yaml
    ```
 
 5. Deploy with:

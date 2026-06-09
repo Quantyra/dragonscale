@@ -1,7 +1,7 @@
 param(
   [string]$EnvFile = ".env",
   [string]$Template = "config/headscale.config.example.yaml",
-  [string]$Output = "config/headscale.config.yaml"
+  [string]$Output = "config/config.yaml"
 )
 
 $ErrorActionPreference = "Stop"
