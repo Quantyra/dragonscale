@@ -23,6 +23,7 @@ Day-one goals:
 - Identity: Google OAuth / OIDC
 - Edge: Traefik on the existing Kuzuryu host
 - Public control endpoint: `dragonscale.kuzuryu.ai`
+- Mesh DNS suffix: `mesh.dragonscale.internal`
 - Private service target: Kuzuryu services over the mesh
 
 ## Repository Contents

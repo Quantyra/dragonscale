@@ -64,7 +64,7 @@ def main() -> None:
     for expected in [
         "https://accounts.google.com",
         "allowed_users",
-        "dragonscale.kuzuryu.ai",
+        "mesh.dragonscale.internal",
         "policy:",
     ]:
         if expected not in config:

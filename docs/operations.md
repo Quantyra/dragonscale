@@ -8,6 +8,7 @@ Initial deployment target:
 - EC2 public host: `18.210.131.61`
 - Host role: existing Kuzuryu Traefik edge
 - Public DNS: `dragonscale.kuzuryu.ai`
+- Mesh DNS suffix: `mesh.dragonscale.internal`
 
 ## Private State
 
