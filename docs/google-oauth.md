@@ -15,8 +15,35 @@ https://dragonscale.kuzuryu.ai/oidc/callback
 3. Create an OAuth client ID.
 4. Choose `Web application`.
 5. Add the redirect URI above.
-6. Save the client ID and client secret into the private deployment `.env`.
+6. Save the client JSON or env fragment under the CYINT shared local credential root.
 7. Keep the public repo free of OAuth secrets.
+
+## CYINT Local Credential Root
+
+On Dan's workstation, Dragonscale OAuth material belongs under:
+
+```text
+C:\Users\Dan\.cyint\credentials\google-oauth
+```
+
+Use either:
+
+```text
+clients\dragonscale-web.json
+```
+
+or:
+
+```text
+runtime-env\dragonscale.env
+```
+
+with:
+
+```text
+DRAGONSCALE_OIDC_CLIENT_ID=...
+DRAGONSCALE_OIDC_CLIENT_SECRET=...
+```
 
 ## Day-One Allowlist
 
