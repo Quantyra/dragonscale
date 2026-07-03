@@ -1,0 +1,15 @@
+# Dragonscale Notices
+
+Dragonscale is licensed under AGPL-3.0-only.
+
+Dragonscale depends on Headscale, an open-source implementation of a Tailscale-compatible control server.
+
+Upstream:
+
+- Project: Headscale
+- Repository: https://github.com/juanfont/headscale
+- Documentation: https://headscale.net/
+- License: BSD-3-Clause
+- Container image used by examples: `headscale/headscale`
+
+Dragonscale does not relicense Headscale. The Dragonscale repository provides deployment templates, operational documentation, smoke tests, and CYINT/Quantyra-specific glue around upstream Headscale.
