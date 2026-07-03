@@ -1,8 +1,8 @@
 # Dragonscale
 
-Dragonscale is a Quantyra open-source deployment kit for running a CYINT-managed WireGuard mesh with Headscale as the self-hosted control plane.
+Dragonscale is an open-source deployment kit for running a self-hosted WireGuard mesh with Headscale as the control plane.
 
-The first production target is private access to Kuzuryu services without relying on the Tailscale SaaS subscription. Dragonscale does not implement cryptography or a VPN protocol; it packages and documents an opinionated Headscale deployment with Google OAuth onboarding, private service access, and a Tailscale rollback path.
+Dragonscale does not implement cryptography or a VPN protocol; it packages and documents an opinionated Headscale deployment with Google OAuth onboarding, private service access, and a Tailscale rollback path.
 
 ## Status
 
@@ -10,7 +10,7 @@ Initial release target: `v0.1.0`.
 
 Day-one goals:
 
-- deploy Headscale at `https://dragonscale.kuzuryu.ai`
+- deploy Headscale at your domain of choice
 - authorize only explicit Google accounts
 - connect Dan's laptop, the Kuzuryu host, and the Hawaii Surface
 - keep Tailscale available until Dragonscale is validated
@@ -22,7 +22,6 @@ Day-one goals:
 - Control plane: Headscale
 - Identity: Google OAuth / OIDC
 - Edge: Traefik on the existing Kuzuryu host
-- Public control endpoint: `dragonscale.kuzuryu.ai`
 - Mesh DNS suffix: `mesh.dragonscale.internal`
 - Private service target: Kuzuryu services over the mesh
 
